@@ -1,4 +1,4 @@
-package seminar2;
+package seminar2.hw2;
 
 public interface BuyerBehavior {
 

@@ -1,16 +1,19 @@
-package seminar2;
+package seminar2.hw2;
 
 public class Human extends Buyer {
+
+    public Human(String name) {
+        super.name=name;
+    }
+
     @Override
     public void setMakeOrder() {
         super.isMakeOrder=true;
-
     }
 
     @Override
     public void setTakeOrder() {
         super.isTakeOrder=true;
-
     }
 
     @Override
@@ -25,6 +28,6 @@ public class Human extends Buyer {
 
     @Override
     String getName() {
-        return null;
+        return name;
     }
 }
