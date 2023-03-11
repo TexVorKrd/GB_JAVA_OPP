@@ -1,20 +1,13 @@
-package hw1.Drinks;
+package hw1.Prodacts.Drinks.ColdDrinks;
 
-import hw1.prodproterty.ColdDrinkNames;
-import hw1.prodproterty.DrinkVoluveSize;
-import hw1.prodproterty.DrinksWaigth;
+import hw1.Prodacts.Drinks.Drink;
+import hw1.Prodacts.Drinks.ColdDrinks.properties.ColdDrinkNames;
+import hw1.Prodacts.Drinks.properties.DrinkVoluveSize;
+import hw1.Prodacts.Drinks.properties.DrinksWaigth;
 
 public class ColdDrink extends Drink {
 
 
-    /**
-     * Создаем экземпляр написка
-     *
-     * @param volue  - объем
-     * @param weigth - вес
-     * @param name   - цазвание
-     * @param price  - цена
-     */
     public ColdDrink(DrinkVoluveSize volue, DrinksWaigth weigth, ColdDrinkNames name, Double price) {
 
         super(volue.getVolue(), weigth.getWeigth(), name.getName(), price);

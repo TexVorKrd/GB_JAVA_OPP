@@ -1,6 +1,10 @@
 package hw1.vendingmachine;
 
-import hw1.Drinks.*;
+import hw1.Prodacts.Drinks.*;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrink;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrinksList;
+import hw1.Prodacts.Drinks.HotDrinks.HotDrink;
+import hw1.Prodacts.Product;
 
 public class VmHotDrink extends VmColdDrink {
 

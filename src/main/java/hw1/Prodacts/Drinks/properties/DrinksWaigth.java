@@ -1,4 +1,4 @@
-package hw1.prodproterty;
+package hw1.Prodacts.Drinks.properties;
 
 import lombok.Getter;
 

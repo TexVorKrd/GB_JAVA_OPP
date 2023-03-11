@@ -1,4 +1,8 @@
-package hw1.Drinks;
+package hw1.Prodacts.Drinks.ColdDrinks;
+
+import hw1.Prodacts.Drinks.Drink;
+import hw1.Prodacts.Drinks.DrinkList;
+import hw1.Prodacts.Product;
 
 import java.util.HashMap;
 
@@ -19,7 +23,7 @@ public class ColdDrinksList extends DrinkList {
     }
 
     @Override
-    public void add(Drink drink, Integer count) {
+    public void add(Drink drink, int count) {
         if (storage.containsKey(drink)) {
             storage.put((ColdDrink) drink, storage.get(drink) + count);
         } else {
@@ -28,7 +32,7 @@ public class ColdDrinksList extends DrinkList {
     }
 
     @Override
-    public void remote(Drink drink, Integer count) {
+    public void remote(Drink drink, int count) {
         if (storage.containsKey(drink)) {
             if (storage.get(drink) < count) {
                 storage.remove(drink);

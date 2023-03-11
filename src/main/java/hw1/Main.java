@@ -1,30 +1,68 @@
 package hw1;
 
-import hw1.Drinks.ColdDrink;
-import hw1.Drinks.ColdDrinksList;
-import hw1.Drinks.HotDrink;
-import hw1.prodproterty.ColdDrinkNames;
-import hw1.prodproterty.DrinkVoluveSize;
-import hw1.prodproterty.DrinksWaigth;
-import hw1.prodproterty.HotDrinkNames;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrink;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrinksList;
+import hw1.Prodacts.Drinks.Drink;
+import hw1.Prodacts.Drinks.HotDrinks.HotDrink;
+import hw1.Prodacts.Drinks.ColdDrinks.properties.ColdDrinkNames;
+import hw1.Prodacts.Drinks.properties.DrinkVoluveSize;
+import hw1.Prodacts.Drinks.properties.DrinksWaigth;
+import hw1.Prodacts.Drinks.HotDrinks.properties.HotDrinkNames;
+import hw1.Prodacts.Product;
 import hw1.vendingmachine.VmHotDrink;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        VmHotDrink vwh = new VmHotDrink();
+        HotDrink hd1 = new HotDrink(DrinkVoluveSize.SMALL, DrinksWaigth.CASE1, HotDrinkNames.Late, 100.0, 40.);
+        HotDrink hd2 = new HotDrink(DrinkVoluveSize.SMALL, DrinksWaigth.CASE2, HotDrinkNames.BlackTee, 110.0, 30.);
+        HotDrink hd3 = new HotDrink(DrinkVoluveSize.SMALL, DrinksWaigth.CASE1, HotDrinkNames.Capuchino, 100.0, 30.);
+        ColdDrink cd1 = new ColdDrink(DrinkVoluveSize.MEDIUM, DrinksWaigth.CASE2, ColdDrinkNames.RedBull, 100.0);
+        ColdDrink cd2 = new ColdDrink(DrinkVoluveSize.SMALL, DrinksWaigth.CASE1, ColdDrinkNames.RedBull, 80.0);
+        ColdDrink d1 = new ColdDrink(DrinkVoluveSize.SMALL, DrinksWaigth.CASE2, ColdDrinkNames.Pepsi, 100.0);
+        ColdDrink d2 = new ColdDrink(DrinkVoluveSize.MEDIUM, DrinksWaigth.CASE1, ColdDrinkNames.Pepsi, 80.0);
 
-        vwh.load(createMixDrinkList());
-        vwh.getStorageInfo();
+        ArrayList<ColdDrink> myList = new ArrayList<>();
+        myList.add(hd1);
+        myList.add(hd2);
+        myList.add(hd3);
+        myList.add(cd1);
+        myList.add(cd2);
+        myList.add(d2);
+        myList.add(d1);
 
-        System.out.println("\n\n---Демо продаж ---");
+        for (Product a:myList) {
+            System.out.println(a.getInfo());
+        }
+        System.out.println("-----");
+        myList.sort(ColdDrink::compareTo);
 
-        vwh.sellProdact(vwh.getStorage().getProduct(1));
-        vwh.sellProdact(vwh.getStorage().getProduct(2));
+        for (Product a:myList) {
+            System.out.println(a.getInfo());
+        }
 
-        vwh.getStorageInfo();
-        vwh.SellInfo();
+
+
+
+
+
+
+//        VmHotDrink vwh = new VmHotDrink();
+//
+//        vwh.load(createMixDrinkList());
+//        vwh.getStorageInfo();
+//
+//        System.out.println("\n\n---Демо продаж ---");
+//
+//        vwh.sellProdact(vwh.getStorage().getProduct(1));
+//        vwh.sellProdact(vwh.getStorage().getProduct(2));
+//
+//        vwh.getStorageInfo();
+//        vwh.SellInfo();
     }
 
     /**

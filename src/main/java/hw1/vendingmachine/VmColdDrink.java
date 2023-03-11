@@ -1,9 +1,9 @@
 package hw1.vendingmachine;
 
-import hw1.Drinks.ColdDrink;
-import hw1.Drinks.ColdDrinksList;
-import hw1.Drinks.Drink;
-import hw1.Drinks.Product;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrink;
+import hw1.Prodacts.Drinks.ColdDrinks.ColdDrinksList;
+import hw1.Prodacts.Drinks.Drink;
+import hw1.Prodacts.Product;
 import lombok.Getter;
 import java.util.Map;
 

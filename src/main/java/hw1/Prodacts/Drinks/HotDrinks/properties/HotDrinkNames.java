@@ -1,4 +1,4 @@
-package hw1.prodproterty;
+package hw1.Prodacts.Drinks.HotDrinks.properties;
 
 /**
  * Список названий горячих напитков

@@ -12,6 +12,7 @@
 
 #IJ
 .idea
+.target
 
 # Package Files #
 *.jar

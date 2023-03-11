@@ -1,6 +1,6 @@
 package hw1.vendingmachine;
 
-import hw1.Drinks.Product;
+import hw1.Prodacts.Product;
 
 import java.util.Map;
 
