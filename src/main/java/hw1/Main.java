@@ -38,6 +38,7 @@ public class Main {
         for (Product a:myList) {
             System.out.println(a.getInfo());
         }
+
         System.out.println("-----");
         myList.sort(ColdDrink::compareTo);
 
@@ -47,22 +48,6 @@ public class Main {
 
 
 
-
-
-
-
-//        VmHotDrink vwh = new VmHotDrink();
-//
-//        vwh.load(createMixDrinkList());
-//        vwh.getStorageInfo();
-//
-//        System.out.println("\n\n---Демо продаж ---");
-//
-//        vwh.sellProdact(vwh.getStorage().getProduct(1));
-//        vwh.sellProdact(vwh.getStorage().getProduct(2));
-//
-//        vwh.getStorageInfo();
-//        vwh.SellInfo();
     }
 
     /**
