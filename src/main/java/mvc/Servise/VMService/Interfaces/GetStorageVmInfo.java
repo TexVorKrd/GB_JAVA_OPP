@@ -6,5 +6,5 @@ import mvc.Model.VM.VendingMachine;
 import java.util.Map;
 
 public interface GetStorageVmInfo {
-    Map<Drink,Integer> storageInfo (VendingMachine vm);
+    Map<Drink, Integer> storageInfo(VendingMachine vm);
 }

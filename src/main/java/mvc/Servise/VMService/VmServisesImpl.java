@@ -4,7 +4,6 @@ import mvc.Model.Drinks.Drink;
 import mvc.Model.VM.VendingMachine;
 import mvc.Servise.VMService.Interfaces.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,24 +11,22 @@ public class VmServisesImpl
         implements GetStorageVmInfo,
         GetSaleVmInfo,
         LoadVM,
-        SaleDrink
-
-{
+        SaleDrink {
     public VmServisesImpl() {
     }
 
     @Override
     public Map<Drink, Integer> storageInfo(VendingMachine vm) {
-        if (vm==null) return null ;
+        if (vm == null) return null;
         return vm.getStorage();
     }
 
     @Override
     public void load(VendingMachine vm, List<Drink> loadingDrinks) {
-        if (loadingDrinks==null||vm==null) return;
-        Map<Drink,Integer> vmStorage=vm.getStorage();
-        for (Drink drink:loadingDrinks) {
-            vmStorage.put(drink,vmStorage.getOrDefault(drink,0)+1);
+        if (loadingDrinks == null || vm == null) return;
+        Map<Drink, Integer> vmStorage = vm.getStorage();
+        for (Drink drink : loadingDrinks) {
+            vmStorage.put(drink, vmStorage.getOrDefault(drink, 0) + 1);
         }
         vm.setStorage(vmStorage);
     }
@@ -57,7 +54,7 @@ public class VmServisesImpl
 
     @Override
     public Map<Drink, Integer> saleInfo(VendingMachine vm) {
-        if (vm==null) return null ;
+        if (vm == null) return null;
         return vm.getSaleInfo();
     }
 }

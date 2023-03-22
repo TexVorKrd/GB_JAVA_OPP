@@ -1,50 +1,20 @@
 package mvc;
 
-import mvc.Model.Drinks.Drink;
+import mvc.Controler.ConsoleConrtolerImpl;
 import mvc.Model.Drinks.DrinkCold;
 import mvc.Model.Drinks.DrinksList;
 import mvc.Model.VM.VendingMachine;
 import mvc.Servise.DrinkService.DrinkListServises;
 import mvc.Servise.DrinkService.DrinkServisces;
 import mvc.Servise.VMService.VmServisesImpl;
-
-import java.util.Map;
+import mvc.View.ConcoleVieverImpl;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
 
-        VmServisesImpl vmServises = new VmServisesImpl();
-
-        DrinkCold dc1 = new DrinkCold("Кола",75.0,0.5);
-        DrinkCold dc4 = new DrinkCold("Спрайт",85.0,0.3);
-
-        DrinkServisces drinkServisces=new DrinkServisces();
-        VendingMachine myVM=createData();
-
-
-        Map<Drink,Integer> l = vmServises.saleInfo(myVM);
-        for (Drink key:l.keySet()) {
-            System.out.print(drinkServisces.getInfo(key)+"  -  ");
-            System.out.println(l.get(key));
-        }
-
-        System.out.println(vmServises.sale(dc1,myVM));
-        System.out.println(vmServises.sale(dc4,myVM));
-
-
-        System.out.println("----------");
-
-        Map<Drink,Integer> l1 = vmServises.saleInfo(myVM);;
-
-        for (Drink entyty:l1.keySet()) {
-            System.out.print(drinkServisces.getInfo(entyty)+"  -  ");
-            System.out.println(l.get(entyty));
-        }
-
-
+        ConsoleConrtolerImpl conrtoler=new ConsoleConrtolerImpl(createData(),new VmServisesImpl(),new ConcoleVieverImpl());
+        conrtoler.luncher();
 
     }
 
@@ -71,11 +41,8 @@ public class Main {
         VendingMachine myVM=new VendingMachine();
         VmServisesImpl vmServises = new VmServisesImpl();
 
-
         vmServises.load(myVM,forLoad.getDrinks());
         return myVM;
-
-
     }
 
 

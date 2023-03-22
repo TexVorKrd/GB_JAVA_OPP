@@ -6,12 +6,12 @@ import java.util.Map;
 
 public interface ConsoleViewer {
 
-    boolean showMenu(Map<Drink, Integer> storage);
+    MenuSelector askFromMenu();
 
     Drink selectDrinkForSale(Map<Drink, Integer> storage);
 
-    boolean showStorage(Map<Drink, Integer> storage);
+    void showStorage(Map<Drink, Integer> storage);
 
-    boolean showSaleInfo(Map<Drink, Integer> storage);
+    void showSaleInfo(Map<Drink, Integer> storage);
 
 }
